@@ -54,4 +54,75 @@ Acessorios.append('Valores');
 
 Acessorios_2 = Acessorios.copy()#Dessa forma realmente faz uma copia
 Acessorios_2.pop();
-print(str(Acessorios) + '\n' + str(Acessorios_2))
+#print(str(Acessorios) + '\n' + str(Acessorios_2))
+
+#Estrutura de repetição
+valores_ao_quadrado = [];
+#for items in range(len(Acessorios)):
+    #print(items)
+
+#for items in Acessorios:
+    #print(items)
+
+
+for i in range(1,11):
+    #print(f'{i} ^ 2 = {i**2}')
+    valores_ao_quadrado.append(i**2);
+
+#for i in valores_ao_quadrado:
+    #print(i)
+
+#Loops Aninhados
+dados = [
+    ['Rodas de liga', 'Travas elétricas', 'Piloto automático', 'Bancos de couro', 'Ar condicionado', 'Sensor de estacionamento', 'Sensor crepuscular', 'Sensor de chuva'],
+    ['Central multimídia', 'Teto panorâmico', 'Freios ABS', '4 X 4', 'Painel digital', 'Piloto automático', 'Bancos de couro', 'Câmera de estacionamento'],
+    ['Piloto automático', 'Controle de estabilidade', 'Sensor crepuscular', 'Freios ABS', 'Câmbio automático', 'Bancos de couro', 'Central multimídia', 'Vidros elétricos']
+]
+
+Acessorios = []
+#forma 1 de transformar um array com mais de uma dimensão, em uma dimensão só
+Acessorios = []
+for i in dados:
+    for j in i:
+        Acessorios.append(j)
+Acessorios = []
+Acessorios = [j for i in dados for j in i]
+Acessorios = set(Acessorios); #remove duplicatas da lista
+
+#Condicionais
+# 1º item da lista - Nome do veículo
+# 2º item da lista - Ano de fabricação
+# 3º item da lista - Veículo é zero km?
+
+dados = [
+    ['Jetta Variant', 2003, False],
+    ['Passat', 1991, False],
+    ['Crossfox', 1990, False],
+    ['DS5', 2019, True],
+    ['Aston Martin DB4', 2006, False],
+    ['Palio Weekend', 2012, False],
+    ['A5', 2019, True],
+    ['Série 3 Cabrio', 2009, False],
+    ['Dodge Jorney', 2019, False],
+    ['Carens', 2011, False]
+]
+carros_usados = []
+zero_km = []
+#só printa os carros verdadeiros
+for i in dados:
+   if(i[-1] == True):
+       zero_km.append(i)
+   elif():
+       print('diferente')
+   else:
+       carros_usados.append(i)
+
+print("Carros Usados:")
+for carros in carros_usados:
+    print(carros)
+
+print("\n")
+
+print("Carros Zero KM:")
+for carros in zero_km:
+    print(carros)

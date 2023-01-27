@@ -1,4 +1,5 @@
 import numpy as np;
+from numpy import arange as npa;
 
 km = np.loadtxt(r"C:\Users\Gustavo Rodrigues\Desktop\Python_Data_Science\Numpy\data\carros-km.txt")
 anos = np.loadtxt(r"C:\Users\Gustavo Rodrigues\Desktop\Python_Data_Science\Numpy\data\carros-anos.txt")
@@ -117,12 +118,29 @@ for i in dados:
    else:
        carros_usados.append(i)
 
-print("Carros Usados:")
-for carros in carros_usados:
-    print(carros)
+#print("Carros Usados:")
+#for carros in carros_usados:
+    #print(carros)
 
-print("\n")
+#print("\n")
 
-print("Carros Zero KM:")
-for carros in zero_km:
-    print(carros)
+#print("Carros Zero KM:")
+#for carros in zero_km:
+    #print(carros)
+
+#Conhecendo o NumPy
+#print(np.arange(10))#criando um array com 10 espaços
+#print(npa(10))#cria o mesmo array sendo que com o outro tipo de import
+km = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])#criando um array com numpy
+print(str(km) + '\n' + str(type(km)))#mostrando o array e o tipo dele
+print(km.dtype)#mostra o tipo das informaçoes armazenadas
+km = np.loadtxt(fname = r'C:\Users\Gustavo Rodrigues\Desktop\Python_Data_Science\Numpy\data\carros-km.txt',
+                dtype = int)#fname:diretorio onde está o arquivo, dtype: converter as informações armazenadas em um tipo
+dados = [
+    ['Rodas de liga', 'Travas elétricas', 'Piloto automático', 'Bancos de couro', 'Ar condicionado', 'Sensor de estacionamento', 'Sensor crepuscular', 'Sensor de chuva'],
+    ['Central multimídia', 'Teto panorâmico', 'Freios ABS', '4 X 4', 'Painel digital', 'Piloto automático', 'Bancos de couro', 'Câmera de estacionamento'],
+    ['Piloto automático', 'Controle de estabilidade', 'Sensor crepuscular', 'Freios ABS', 'Câmbio automático', 'Bancos de couro', 'Central multimídia', 'Vidros elétricos']
+]
+Acessorios = np.array(dados)
+print(km.shape)#quantidade de linhas e colunas existentes = 258
+print(Acessorios.shape) # 3,8
